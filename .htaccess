@@ -1,0 +1,36 @@
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Map http://www.example.com to /dist.
+RewriteRule ^$ /dist/ [L]
+
+# Map http://www.example.com/x to /dist/x unless there is a x in the web root.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/dist/
+RewriteRule ^(.*)$ /dist/$1
+
+# Add trailing slash to directories within dist
+# This does not expose the internal URL.
+RewriteCond %{SCRIPT_FILENAME} -d
+RewriteRule ^dist/(.*[^/])$ https://buenapagina.com/$1/ [R=301]
+
+<IfModule mod_deflate.c>
+    <filesMatch "\.(js|css|html|php)$">
+        SetOutputFilter DEFLATE
+    </filesMatch>
+</IfModule>
+
+<filesMatch ".(jpg|jpeg)$">
+    Header set Cache-Control "dist,max-age=31536000,immutable"
+</filesMatch>
+
+<filesMatch ".(js|json)$">
+    Header set Cache-Control "dist, max-age=0, must-revalidate"
+</filesMatch>

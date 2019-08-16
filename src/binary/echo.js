@@ -1,0 +1,1 @@
+// Simple pure function representing echo
