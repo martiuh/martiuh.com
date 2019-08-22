@@ -1,6 +1,8 @@
 import React from 'react';
 import binary from '../binary';
 
+import './Terminal.scss';
+
 export default function Timer() {
   const [terminal, updateTerminal] = React.useState('');
   const [commands, updateCommands] = React.useState([]);
@@ -20,13 +22,13 @@ export default function Timer() {
   };
 
   return (
-    <code className="terminal__main">
+    <div className="terminal">
       {commands.map(command => (
         <pre key={command}>{command}</pre>
       ))}
       <form onSubmit={onSubmitAction}>
         $ <input value={terminal} onChange={changeTerminal} />
       </form>
-    </code>
+    </div>
   );
 }

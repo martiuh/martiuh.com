@@ -1,0 +1,18 @@
+div.terminal {
+  font-family: monospace;
+  color: white;
+  background-color: #3d3d3d;
+  height: 450px;
+  padding: 1rem;
+  font-size: 18px;
+  overflow-y: auto;
+  input {
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+
+    &:focus {
+    }
+  }
+}

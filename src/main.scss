@@ -1,18 +1,19 @@
 :root {
-  --custom-orange: #F76239;
+  --custom-orange: #f76239;
   --custom-black: #1b1b1b;
-  --custom-red: #F5403D;
-  --custom-yellow: #F79C3B;
+  --custom-red: #f5403d;
+  --custom-yellow: #f79c3b;
 }
 
 @tailwind preflight;
 
-input {
-  font-size: 18px;
-}
-
 html {
   font-size: 16px;
+  background-color: #292929;
+}
+
+input {
+  font-size: 18px;
 }
 
 a {
@@ -34,7 +35,6 @@ svg {
 .content {
   padding: 1rem;
 }
-
 
 .shadow-2xl {
   box-shadow: 0 5px 9px 1px rgba(0, 0, 0, 0.7);
