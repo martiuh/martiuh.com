@@ -1,2 +1,31 @@
-$colors: 000;
+// Colors
 
+$black: #161616;
+$black-2: darken($black, 10);
+$white: #f1f1f1;
+$martiuh-blue: #c5f0eb;
+$dark-primary: #080308;
+$accent: #fff131;
+$highlight: #ff0095;
+// Sizes
+
+$tablet: 750px;
+$logo-height: 60px;
+
+// @mixins
+
+@mixin glowing-text($base) {
+  $lighter-base: lighten($base, 20);
+  $lightest-base: lighten($base, 40);
+  color: $base;
+  text-shadow: 0 0 1px transparentize($base, 0.9),
+    0 0 2px transparentize($color: $base, $amount: 0.32),
+    0 0 30px transparentize($color: $base, $amount: 0.5),
+    0 0 15px transparentize($color: $base, $amount: 0.92);
+}
+
+@mixin mobile() {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}

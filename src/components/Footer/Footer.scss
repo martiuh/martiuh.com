@@ -1,48 +1,9 @@
+@import '../../_variables.scss';
+
 .footer {
-  @apply pt-5 py-8 ;
-  overflow: hidden;
-  border-top: 3px solid var(--custom-yellow);
-  text-align: center;
-  position: relative;
-  background: #ffe259; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffa751,
-    #ffe259
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffa751,
-    #ffe259
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-  span {
-    position: absolute;
+  @apply pt-5 py-8;
 
-    &:first-child {
-      width: 15vw;
-      height: 100px;
-      background-color: rgba(255, 255, 255, 0.2);
-      top: 20%;
-      left: 0%;
-      z-index: 2;
-    }
-
-    &:nth-child(2) {
-      width: 8vw;
-      height: 8vw;
-      border-radius: 8vw;
-      left: 80%;
-      top: 50%;
-      background-color: white;
-      background-color: rgba(255, 255, 255, 0.5);
-    }
-  }
-
-  .credits {
-    color: rgb(194, 126, 0);
-    a {
-      color: rgb(223, 145, 0);
-    }
-  }
+  $font-color: lighten($dark-primary, 30);
+  background-color: darken($dark-primary, 10);
+  @include glowing-text($font-color);
 }
