@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from '@reach/router';
 
-import Logo from '../../images/logo.png';
-
-import './Navbar.css';
+import './Navbar.scss';
 
 const NavLink = props => (
   <Link
@@ -23,13 +21,13 @@ const NavLink = props => (
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <Link className="navbar-item" to="/">
-        <img className="navbar-item__logo" src={Logo} alt="BuenaPagina.com" />
+      <Link className="navbar-item navbar-item__header" to="/">
+        Martiuh
       </Link>
       <span className="navbar-menu">
-        <NavLink to="/blog">Blog</NavLink>
+        {/* <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/about">About</NavLink>
-        <NavLink to="/dynamic">Dynamic</NavLink>
+        <NavLink to="/dynamic">Dynamic</NavLink> */}
       </span>
     </nav>
   );

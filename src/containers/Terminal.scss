@@ -1,16 +1,42 @@
+@import '../_variables.scss';
+
 div.terminal {
   font-family: monospace;
   color: white;
-  background-color: #3d3d3d;
-  height: 450px;
+  background-color: lighten($dark-primary, 2);
+  height: 28rem;
   padding: 1rem;
   font-size: 18px;
   overflow-y: auto;
+  border-top: 1.5rem solid lighten($dark-primary, 6);
+  border-radius: 0.5rem;
+  overflow: auto;
+  width: 100%;
+  height: calc(100vw * 0.35);
+
+  @include mobile() {
+    width: 90vw;
+    height: 80vw;
+  }
+
+  .intro-text {
+    @apply mb-2;
+  }
+
+  .old-commands {
+    @include glowing-text(darken($accent, 35));
+  }
+
+  .typing-line {
+    @include glowing-text($accent);
+  }
+
   input {
     background: transparent;
-    color: white;
+    @include glowing-text($accent);
     border: none;
     outline: none;
+    width: 80%;
 
     &:focus {
     }

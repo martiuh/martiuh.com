@@ -1,15 +1,31 @@
+@import './_variables.scss';
+
 :root {
   --custom-orange: #f76239;
   --custom-black: #1b1b1b;
   --custom-red: #f5403d;
   --custom-yellow: #f79c3b;
+  --tablet: 750px;
+  --logo-height: 60px;
 }
 
 @tailwind preflight;
 
 html {
   font-size: 16px;
-  background-color: #292929;
+  background-color: $dark-primary;
+  color: $white;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
 }
 
 input {
@@ -40,19 +56,7 @@ svg {
   box-shadow: 0 5px 9px 1px rgba(0, 0, 0, 0.7);
 }
 
-.bp-orange {
-  color: var(--custom-orange);
-}
-
-.bp-black {
-  color: var(--custom-black);
-}
-
-.bp-red {
-  color: var(--custom-red);
-}
-
-.main-container {
+.text-container {
   /* this is great */
   @apply mt-5 p-4;
 }
@@ -84,8 +88,12 @@ svg {
   }
 }
 
-.flex-centered {
+.flex--centered {
   @apply flex items-center justify-center;
+}
+
+.flex--center-between {
+  @apply flex items-center justify-between;
 }
 
 a.primary-link {

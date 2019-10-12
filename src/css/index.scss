@@ -1,2 +1,45 @@
+@import './../_variables.scss';
+
 main.index {
+  .index--hero {
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  .im-section {
+    @apply p-2;
+    flex-direction: column;
+    flex-basis: 10%;
+
+    .link-glow {
+      @include glowing-text($highlight);
+    }
+  }
+
+  .terminal-section {
+    @apply p-2;
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  .header {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  .main.header {
+    font-size: 4rem;
+  }
+
+  .second.subheader {
+    font-size: 2rem;
+  }
+
+  .index--linkbar {
+    a {
+      padding: 1rem;
+    }
+  }
 }
