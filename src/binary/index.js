@@ -1,11 +1,12 @@
 import * as commands from './commands';
 
 export default function binary(command) {
-  const firstWhiteSpace = command.indexOf(' ');
-  let validCommand = command.substr(0, firstWhiteSpace);
-  const action = command.substr(firstWhiteSpace + 1);
+  const safeCommand = command.toLowerCase();
+  const firstWhiteSpace = safeCommand.indexOf(' ');
+  let validCommand = safeCommand.substr(0, firstWhiteSpace);
+  const action = safeCommand.substr(firstWhiteSpace + 1);
   if (validCommand === '') {
-    validCommand = command;
+    validCommand = safeCommand;
   }
 
   const knownCommand = commands[validCommand];
