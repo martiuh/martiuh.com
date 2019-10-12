@@ -3,7 +3,7 @@
 div.terminal {
   font-family: monospace;
   color: white;
-  background-color: lighten($dark-primary, 2);
+  background-color: lighten($dark-primary, 4);
   height: 28rem;
   padding: 1rem;
   font-size: 18px;
@@ -16,7 +16,7 @@ div.terminal {
 
   @include mobile() {
     width: 90vw;
-    height: 80vw;
+    height: 80vh;
   }
 
   .intro-text {
