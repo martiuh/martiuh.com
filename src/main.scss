@@ -141,3 +141,10 @@ a.primary-link {
 .text-center {
   text-align: center;
 }
+
+.show-mobile {
+  display: none;
+  @include mobile() {
+    display: inherit;
+  }
+}
