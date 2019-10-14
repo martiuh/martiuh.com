@@ -96,6 +96,10 @@ svg {
   @apply flex items-center justify-between;
 }
 
+.flex--center-around {
+  @apply flex items-center justify-around;
+}
+
 a.primary-link {
   color: var(--custom-red);
   --font-size: 1.2rem;

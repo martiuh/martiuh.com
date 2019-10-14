@@ -10,6 +10,7 @@ $highlight: #ff0095;
 // Sizes
 
 $tablet: 750px;
+$big: 1200px;
 $logo-height: 60px;
 
 // @mixins
@@ -26,6 +27,12 @@ $logo-height: 60px;
 
 @mixin mobile() {
   @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin bigger() {
+  @media (min-width: $big) {
     @content;
   }
 }

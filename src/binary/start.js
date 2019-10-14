@@ -4,10 +4,10 @@ export default function start() {
   return (
     <React.Fragment>
       <span>
-        Hi, thanks visiting my website. I'm a self-taught frontend developer, I
-        enjoy working with HTML, CSS and JavaScript (mostly React), this website
-        is a work in progress and if you have a suggestion feel free to reach me
-        out on twitter
+        Hi! thanks for visiting my website. I'm a self-taught frontend
+        developer, I enjoy working with HTML, CSS and JavaScript (mostly React),
+        this website is a work in progress, I you want to get in touch with me,
+        feel free to contact me on Twitter, Github or LinkedIn
       </span>
       <span style={{ display: 'block', marginTop: '0.5rem' }}>
         Type 'help' for more supported commands
