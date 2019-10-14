@@ -25,6 +25,11 @@ $logo-height: 60px;
     0 0 15px transparentize($color: $base, $amount: 0.92);
 }
 
+@mixin glowing-background($base) {
+  background: $base;
+  box-shadow: 0 0 0.5rem 0.05rem $base;
+}
+
 @mixin mobile() {
   @media (max-width: $tablet) {
     @content;

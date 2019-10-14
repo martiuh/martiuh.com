@@ -73,6 +73,9 @@ export default function Terminal() {
         autoComplete="false"
       >
         $ <input value={terminal} onChange={changeTerminal} ref={inputRef} />
+        <button className="show-mobile enter-btn" type="submit">
+          enter
+        </button>
       </form>
     </div>
   );
