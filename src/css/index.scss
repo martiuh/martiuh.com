@@ -1,16 +1,24 @@
 @import './../_variables.scss';
 
 main.index {
+  width: 100%;
   .index--hero {
+    align-items: center;
     @include mobile() {
       flex-direction: column;
     }
   }
 
   .im-section {
-    @apply p-2;
+    flex: 1;
+    margin: auto;
+    @include bigger() {
+      text-align: center;
+    }
+
+    @apply p-4;
+
     flex-direction: column;
-    flex-basis: 10%;
 
     .link-glow {
       @include glowing-text($highlight);
@@ -18,9 +26,16 @@ main.index {
   }
 
   .terminal-section {
-    @apply p-2;
+    flex: 2;
+    margin: auto;
     width: 100%;
-    max-width: 40rem;
+    height: 100%;
+    @apply p-4;
+
+    @include bigger() {
+      padding: 4rem;
+      flex: 1;
+    }
   }
 
   .header {
@@ -30,7 +45,7 @@ main.index {
   }
 
   .main.header {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .second.subheader {

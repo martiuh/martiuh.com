@@ -1,3 +1,10 @@
+import * as commands from './commands';
+
+const commArr = Object.keys(commands);
+
 export default function help() {
-  return `This is a work in progress, currently there's only support for "echo", "whoami" and "help"`;
+  return `Supported commands ${commArr.reduce(
+    (acc, current) => `${acc} "${current}"`,
+    ''
+  )}`;
 }
