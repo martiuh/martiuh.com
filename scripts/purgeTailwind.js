@@ -16,7 +16,8 @@ async function purgeTailwindMainCss() {
 
   const purgeCSSResult = await new PurgeCSS().purge({
     content: ['../dist/**/*.html'],
-    css: [`../dist/${mainCssFile}`]
+    css: [`../dist/${mainCssFile}`],
+    defaultExtractor: content => content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
   });
 
   const [purgedMainCss] = purgeCSSResult;

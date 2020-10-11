@@ -4,8 +4,9 @@ module.exports = {
     removeDeprecatedGapUtilities: true
   },
   purge: {
-    layers: ['base', 'components', 'utilities'],
-    content: ['./src/**/*.js', './src/**/*.jsx']
+    enabled: false,
+    // layers: ['base', 'components', 'utilities'],
+    // content: ['./src/**/*.js', './src/**/*.jsx']
   },
   target: 'layers',
   prefix: '',
