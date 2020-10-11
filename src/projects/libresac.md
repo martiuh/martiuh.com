@@ -1,9 +1,9 @@
 ---
 title: 'Libres A.C'
 description: 'Website for a NGO in Monterrey'
-month: 06
-year: 2017
-type: webapp
+from: 2015/05
+to: 2015/07
+type: freelance
 url: 'https://libresac.org'
 country: México
 state: Nuevo Leon

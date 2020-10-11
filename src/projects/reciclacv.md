@@ -1,9 +1,9 @@
 ---
 title: 'Recicla CV'
 description: 'Static Site for a business'
-month: 06
-year: 2016
-type: 'static'
+from: 2016/06
+to: 2016/07
+type: freelance
 url: 'https://reciclacv.com'
 thumb: reciclacv.jpg
 country: México

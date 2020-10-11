@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import marked from 'marked';
 
 import Document from './Document';
-import { dateSorter } from './static.utils';
+import { dateSorter, getDates, mapDates } from './static.utils';
 
 const projectsDir = slash(path.resolve('./src/projects'));
 
@@ -34,10 +34,12 @@ export default {
             .toString();
           const projectMatter = matter(projectString);
           const content = marked(projectMatter.content);
+          const dates = getDates(projectMatter.data);
           return {
             ...projectMatter.data,
             content,
-            basename: proj.replace(/\.md$/, '')
+            basename: proj.replace(/\.md$/, ''),
+            dates
           };
         }
         return null;
@@ -48,7 +50,7 @@ export default {
       {
         path: '/projects',
         getData: () => ({
-          projects: dateSorter(projects)
+          projects: dateSorter(projects, 'ASC')
         }),
         children: projects.map(project => ({
           path: `/${project.basename}`,

@@ -12,7 +12,7 @@ export default function IndexPage() {
       <Navbar />
       <main className="index">
         <SEO title="Martiuh.com" titleTemplate={false} />
-        <div className="flex--center-between index--hero">
+        <div className="flex justify-between index--hero">
           <div className="im-section">
             <h1 className="main header ">I'm Tona González</h1>
             <h2 className="second header">a Frontend Developer</h2>

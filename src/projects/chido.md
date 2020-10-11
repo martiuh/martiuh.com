@@ -1,8 +1,8 @@
 ---
 title: 'Chido [archived]'
 description: 'npm package for creating static site generator'
-month: 12
-year: 2018
+from: 2018/12
+to: 2019/03
 type: open-source
 url: 'https://github.com/martiuh/chido'
 country: México

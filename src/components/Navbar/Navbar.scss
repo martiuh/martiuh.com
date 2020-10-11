@@ -75,16 +75,15 @@
 }
 
 .navbar .navbar-menu a.navbar-item--active {
-  color: darken($color-highlight, 25);
+  color: darken($color-active-link, 15);
 }
 
 .navbar .navbar-menu a.navbar-item--active:hover {
-  color: darken($color-highlight, 10);
+  color: darken($color-active-link, 10);
 }
 
 .navbar .navbar-menu a.navbar-item--active:focus {
-  border-color: #fa5173;
-  color: #fa5173;
+  color: darken($color-active-link, 10);
 }
 
 .navbar-item__header {

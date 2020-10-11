@@ -1,9 +1,9 @@
 ---
 title: 'Hidroval'
 description: 'Universal App and REST API for a valves factory'
-month: 11
-year: 2017
-type: webapp
+from: 2017/11
+to: 2018/12
+type: freelance
 url: 'https://hidroval.com.mx'
 country: México
 state: Jalisco

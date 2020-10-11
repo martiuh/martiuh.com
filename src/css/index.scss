@@ -19,14 +19,6 @@ main.index {
     @apply p-4;
 
     flex-direction: column;
-
-    .link-glow {
-      @include glowing-text($highlight);
-
-      &:hover {
-        @include glowing-text(lighten($color-highlight, 30));
-      }
-    }
   }
 
   .terminal-section {

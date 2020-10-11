@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .project-figure {
   display: flex;
 
@@ -25,4 +27,16 @@
     #f09819,
     #ff512f
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.project__link {
+  @include glowing-text($color-green);
+  svg {
+    margin: 0 0.3rem;
+    height: var(--font-size);
+    display: inline;
+    fill: currentColor;
+    vertical-align: middle;
+    width: calc(max(2vw, 30px));
+  }
 }

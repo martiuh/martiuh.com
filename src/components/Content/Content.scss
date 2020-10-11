@@ -1,0 +1,22 @@
+.content__contentBox {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply my-5;
+  }
+
+  h2 {
+    @apply text-lg;
+  }
+
+  p {
+    @apply my-5;
+  }
+
+  li {
+    list-style: circle;
+  }
+}

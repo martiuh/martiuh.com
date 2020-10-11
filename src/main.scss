@@ -9,10 +9,7 @@
   --logo-height: 60px;
 }
 
-
-
 html {
-  font-size: 16px;
   background-color: $dark-primary;
   color: $white;
 }
@@ -48,103 +45,22 @@ svg {
   fill: currentColor;
 }
 
-.content {
-  padding: 1rem;
-}
+.link-glow {
+  @include glowing-text($highlight);
 
-.shadow-2xl {
-  box-shadow: 0 5px 9px 1px rgba(0, 0, 0, 0.7);
-}
-
-.text-container {
-  /* this is great */
-  @apply mt-5 p-4;
-}
-
-.bp-format {
-  line-height: 1.5rem;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--custom-orange);
-    margin: 1rem 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  p,
-  li {
-    color: var(--custom-black);
-  }
-
-  a {
-    color: var(--custom-red);
+  &:hover {
+    @include glowing-text(lighten($color-highlight, 30));
   }
 }
 
-.flex--centered {
-  @apply flex items-center justify-center;
+.text-glow-blue {
+  @include glowing-text($martiuh-blue);
 }
 
-.flex--center-between {
-  @apply flex items-center justify-between;
+.text-glow-red {
+  @include glowing-text($martiuh-red);
 }
 
-.flex--center-around {
-  @apply flex items-center justify-around;
-}
-
-a.primary-link {
-  color: var(--custom-red);
-  --font-size: 1.2rem;
-  font-size: var(--font-size);
-  font-weight: bold;
-  display: flex;
-  @apply inline-block p-3 text-red-dark;
-
-  &:hover,
-  &:focus {
-    @apply text-red-light;
-  }
-
-  &:focus {
-    @apply border-red-light;
-    outline: 2px dashed;
-    text-decoration: underline;
-  }
-
-  svg {
-    margin: 0 0.3rem;
-    height: var(--font-size);
-    display: inline-block;
-    fill: currentColor;
-    vertical-align: middle;
-  }
-}
-
-.text-container {
-  @apply text-justify;
-  padding: 0 0.5rem;
-  margin: 1rem 0;
-
-  @media screen and (min-width: 750px) {
-    padding: 0 5rem;
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-
-.show-mobile {
-  display: none;
-  @include mobile() {
-    display: inherit;
-  }
+.text-glow-orange {
+  @include glowing-text($martiuh-orange);
 }
