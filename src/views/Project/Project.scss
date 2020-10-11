@@ -1,0 +1,28 @@
+.project-figure {
+  display: flex;
+
+  .project-figure__image {
+    max-width: 100vw;
+    height: 45vh;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: 750px) {
+      height: 60vh;
+    }
+  }
+}
+
+.action-btn {
+  background: #ff512f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f09819,
+    #ff512f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f09819,
+    #ff512f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

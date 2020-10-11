@@ -25,6 +25,7 @@ export default function Navbar() {
         Martiuh
       </Link>
       <span className="navbar-menu">
+        <NavLink to="/projects">Projects</NavLink>
         {/* <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/dynamic">Dynamic</NavLink> */}

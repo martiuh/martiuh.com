@@ -20,7 +20,9 @@
     "@reach/router": "^1.2.1",
     "app-manifest-webpack-plugin": "^1.2.0",
     "axios": "^0.19.0",
+    "gray-matter": "^4.0.2",
     "html-react-parser": "^0.9.1",
+    "marked": "^1.2.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
@@ -31,7 +33,7 @@
     "react-static-plugin-source-filesystem": "^7.0.10",
     "react-svg-loader": "^3.0.1",
     "sass-loader": "^7.1.0",
-    "slash": "^2.0.0",
+    "slash": "^3.0.0",
     "tailwindcss": "^0.7.4",
     "webpack-pwa-manifest": "^4.0.0"
   },

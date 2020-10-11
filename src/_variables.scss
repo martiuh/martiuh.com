@@ -6,7 +6,10 @@ $white: #f1f1f1;
 $martiuh-blue: #c5f0eb;
 $dark-primary: #080308;
 $accent: #fff131;
-$highlight: #ff0095;
+$color-highlight: #ff0095;
+$highlight: $color-highlight;
+$color-green: #52ffb8;
+$color-nav-link: #52ffb8;
 // Sizes
 
 $tablet: 750px;

@@ -4,3 +4,5 @@ export function toTop() {
   }
   return null;
 }
+
+export const getProjectImage = url => `/project-images/${url}`;

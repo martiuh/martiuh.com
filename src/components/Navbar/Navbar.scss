@@ -28,8 +28,9 @@
 
 .navbar .navbar-menu {
   display: flex;
-  margin-left: auto;
-  padding-right: 8vw;
+  padding-left: 8vw;
+  justify-content: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 750px) {
@@ -43,7 +44,6 @@
 
 .navbar .navbar-menu .navbar-item {
   padding: calc(var(--logo-height) / 2) 0px;
-  width: calc(100vw / 8);
   border-bottom: 5px solid transparent;
   text-align: center;
   text-overflow: ellipsis;
@@ -52,7 +52,11 @@
    */
   white-space: nowrap;
   overflow: hidden;
-  color: black;
+  color: $color-highlight;
+
+  &:hover {
+    color: lighten($color-highlight, 30);
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -65,15 +69,17 @@
 }
 
 .navbar .navbar-menu .navbar-item:focus {
-  color: var(--custom-orange);
-  border-color: var(--custom-orange);
+  color: lighten($accent, 30);
   outline: none;
   transition: color, border 100ms ease;
 }
 
 .navbar .navbar-menu a.navbar-item--active {
-  border-color: crimson;
-  color: crimson;
+  color: darken($color-highlight, 25);
+}
+
+.navbar .navbar-menu a.navbar-item--active:hover {
+  color: darken($color-highlight, 10);
 }
 
 .navbar .navbar-menu a.navbar-item--active:focus {
