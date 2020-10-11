@@ -13,10 +13,10 @@ export default function IndexPage() {
       <main className="index">
         <SEO title="Martiuh.com" titleTemplate={false} />
         <div className="flex justify-between index--hero">
-          <div className="im-section">
+          <div className="im-section text-center">
             <h1 className="main header ">I'm Tona González</h1>
             <h2 className="second header">a Frontend Developer</h2>
-            <div className="flex--centered index--linkbar">
+            <div className="index--linkbar">
               <a href="https://twitter.com/martiuh" className="link-glow">
                 Twitter
               </a>
