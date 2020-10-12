@@ -1,0 +1,30 @@
+.link-button {
+  padding: 10px 10px;
+  background-color: #e2e2e2;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 200ms ease-out;
+  &.lg {
+    font-size: 2rem;
+  }
+  
+  &.md {
+    font-size: 1.4rem;
+  }
+  
+  &.s {
+    font-size: 0.8rem;
+  }
+
+  &:focus {
+    outline: 2px dashed rgb(59, 59, 204);
+  }
+
+  &:hover {
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 1);
+  }
+}

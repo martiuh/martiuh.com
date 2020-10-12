@@ -7,7 +7,7 @@ module.exports = {
   ident: 'postcss',
   plugins: [
     postcssFlexbugsFixes,
-    tailwindcss('./tailwind.js'),
+    tailwindcss('./tailwind.config.js'),
     autoprefixer({
       grid: true,
       browsers: [
@@ -19,4 +19,4 @@ module.exports = {
       flexbox: 'no-2009' // I'd opt in for this - safari 9 & IE 10.
     })
   ]
-}
+};

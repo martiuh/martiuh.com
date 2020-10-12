@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 
 import gTag from './gTag';
 import './main.scss';
+import './tailwind.css';
 
 function Dynamic() {
   return (

@@ -3,10 +3,16 @@
 $black: #161616;
 $black-2: darken($black, 10);
 $white: #f1f1f1;
-$martiuh-blue: #c5f0eb;
+$martiuh-blue: #53eedc;
+$martiuh-red: #f82c47;
+$martiuh-orange: #f1ab12;
 $dark-primary: #080308;
 $accent: #fff131;
-$highlight: #ff0095;
+$color-highlight: #ff0095;
+$color-active-link: #e129f1;
+$highlight: $color-highlight;
+$color-green: #52ffb8;
+$color-nav-link: #52ffb8;
 // Sizes
 
 $tablet: 750px;
