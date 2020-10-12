@@ -7,7 +7,7 @@ import Heading from '../../components/Heading';
 import Content from '../../components/Content';
 import Navbar from '../../components/Navbar';
 import LeftArrow from '../../svg/left-arrow.svg';
-import { PROJECT_TYPES } from '../../constants';
+import { PROJECT_NOW, PROJECT_TYPES } from '../../constants';
 import dates from '../../lib/dates';
 
 import './Project.scss';
@@ -18,10 +18,18 @@ const { Paragraph, StyledBox } = Content;
 
 const formatFromToDates = (from, to) => {
   const formatString = 'MMMM YYYY';
+  const isNow = to === PROJECT_NOW;
   const fromString = dates(from).format(formatString);
-  const toString = dates(to).format(formatString);
 
-  return `(${fromString} - ${toString})`;
+  let sentence = `(${fromString}`;
+  if (isNow) {
+    sentence = `${sentence} - Present`;
+  } else {
+    const toString = dates(to).format(formatString);
+    sentence = `${sentence} - ${toString}`;
+  }
+
+  return `${sentence})`;
 };
 
 const getProjectTypeColor = type => {
