@@ -24,7 +24,7 @@
     "dayjs": "^1.9.1",
     "gray-matter": "^4.0.2",
     "html-react-parser": "^0.9.1",
-    "marked": "^1.2.0",
+    "marked": "^2.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
