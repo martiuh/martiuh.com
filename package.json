@@ -25,7 +25,7 @@
     "gray-matter": "^4.0.2",
     "html-react-parser": "^0.9.1",
     "marked": "^1.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-hot-loader": "^4.3.12",
