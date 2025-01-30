@@ -1,9 +1,0 @@
-@import '../../_variables.scss';
-
-.footer {
-  @apply pt-5 py-8;
-
-  $font-color: lighten($dark-primary, 30);
-  background-color: darken($dark-primary, 10);
-  @include glowing-text($font-color);
-}
