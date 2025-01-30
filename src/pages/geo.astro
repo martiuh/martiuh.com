@@ -3,5 +3,80 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-  <p>Hola Geo!</p>
+  <main class="background py-5">
+    <div class="flex items-center justify-center">
+      <h1 class="text-6xl md:text-6xl text-white font-bold">
+        <span class="geo-font">Geovanna</span>
+      </h1>
+    </div>
+    <div class="container mx-auto px-4 mt-8 max-w-md">
+      <div class="bg-white text-fuchsia-800 rounded-lg shadow-lg p-6">
+        <article class="prose lg:prose-xl">
+          Conocerte ha sido de lo más bonito que me ha pasado, tu forma tan
+          cariñosa y atenta de ser. Tus besos y abrazos tiernos, tu apertura y
+          lindas palabras <span class="font-bold">ME ENCANTAS</span>
+          <span class="inline-flex gap-1 justify-center">
+            <img src="/images/geo-heart.png" alt="heart" class="size-[1em]" />
+            <img src="/images/geo-heart.png" alt="heart" class="size-[1em]" />
+            <img src="/images/geo-heart.png" alt="heart" class="size-[1em]" />
+          </span>
+        </article>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 mt-8 max-w-lg">
+      <img
+        class="h-74 img-fluid rounded-lg shadow-lg"
+        src="images/geo-tona--compress.jpg"
+        alt="Geovanna y Tona"
+      />
+    </div>
+    <div class="container mx-auto px-4 mt-8 max-w-lg">
+      <div class="bg-white text-fuchsia-800 rounded-lg shadow-lg p-6">
+        <p class="text-center mb-3">
+          El tiempo que paso contigo es de lo más bonito y siempre...
+        </p>
+
+        <img
+          class="h-74 rounded-lg shadow-lg object-center object-fill"
+          src="images/cada-segundo.gif"
+          alt="Valio cada maldito segundo"
+        />
+      </div>
+    </div>
+    <div class="container mx-auto px-4 mt-8 max-w-lg">
+      <div class="bg-white text-fuchsia-800 text-xl rounded-lg shadow-lg p-6">
+        <p>
+          Y por eso mil un cosas más hay una cosa que te quiero pedir, aunque ya
+          lo hice una vez. Pero no fue el momento adecuado
+        </p>
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  @font-face {
+    font-family: "Geovanna";
+    src: url("/fonts/geo.woff2") format("woff2");
+  }
+
+  .geo-font {
+    font-family: "Geovanna", sans-serif;
+  }
+
+  .background {
+    min-height: 100dvh;
+    background: #f953c6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #b91d73,
+      #f953c6
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #b91d73,
+      #f953c6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+</style>
