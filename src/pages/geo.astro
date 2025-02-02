@@ -1,15 +1,19 @@
 ---
+import { YesBlock } from "@/components/YesBlock";
+import { TonaTools } from "@/components/TonaTools";
 import Layout from "@/layouts/Layout.astro";
+const isTona = Astro.url.searchParams.get("is") === "tona";
 ---
 
 <Layout>
   <main class="background py-5">
+    {isTona ? <TonaTools client:load /> : null}
     <div class="flex items-center justify-center">
       <h1 class="text-6xl md:text-6xl text-white font-bold">
         <span class="geo-font">Geovanna</span>
       </h1>
     </div>
-    <div class="container mx-auto px-4 mt-8 max-w-md">
+    <div class="container mx-auto px-4 mt-8 max-w-lg">
       <div class="bg-white text-fuchsia-800 rounded-lg shadow-lg p-6">
         <article class="prose lg:prose-xl">
           Conocerte ha sido de lo más bonito que me ha pasado, tu forma tan
@@ -26,7 +30,7 @@ import Layout from "@/layouts/Layout.astro";
 
     <div class="container mx-auto px-4 mt-8 max-w-lg">
       <img
-        class="h-74 img-fluid rounded-lg shadow-lg"
+        class="h-74 object-center object-cover rounded-lg shadow-lg"
         src="images/geo-tona--compress.jpg"
         alt="Geovanna y Tona"
       />
@@ -52,10 +56,20 @@ import Layout from "@/layouts/Layout.astro";
         </p>
       </div>
     </div>
+    <div class="container mx-auto px-4 mt-8 max-w-lg">
+      <img
+        class="mx-auto w-lg object-center object-fill rounded-lg shadow-lg"
+        src="images/amorcito.jpg"
+        alt="Geovanna con su ramo de flores"
+      />
+    </div>
+    <YesBlock client:load />
   </main>
 </Layout>
 
-<style>
+<style is:global>
+  @layer theme, base, components, utilities;
+
   @font-face {
     font-family: "Geovanna";
     src: url("/fonts/geo.woff2") format("woff2");
@@ -78,5 +92,21 @@ import Layout from "@/layouts/Layout.astro";
       #b91d73,
       #f953c6
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .heart {
+    --c: var(--color-fuchsia-800);
+    width: 100px;
+    aspect-ratio: 1;
+    background:
+      radial-gradient(at 70% 31%, var(--c) 29%, #0000 30%),
+      radial-gradient(at 30% 31%, var(--c) 29%, #0000 30%),
+      linear-gradient(var(--c) 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-43% 0, 50% 91%, 143% 0);
+  }
+
+  .answer {
+    display: block;
+    transform: translateY(-25%);
   }
 </style>
