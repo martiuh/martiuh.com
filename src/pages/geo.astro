@@ -5,7 +5,7 @@ import Layout from "@/layouts/Layout.astro";
 const isTona = Astro.url.searchParams.get("is") === "tona";
 ---
 
-<Layout>
+<Layout title="Me gustas Geovanna">
   <main class="background py-5">
     {isTona ? <TonaTools client:load /> : null}
     <div class="flex items-center justify-center">
