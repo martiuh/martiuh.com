@@ -5,7 +5,17 @@ import Layout from "@/layouts/Layout.astro";
 const isTona = Astro.url.searchParams.get("is") === "tona";
 ---
 
-<Layout title="Me gustas Geovanna">
+<Layout
+  title="Me gustas Geovanna"
+  metatags={[
+    { property: "og:image", content: "/geo-thumbnail.png" },
+    { property: "og:title", content: "Me gustas Geovanna" },
+    {
+      property: "og:description",
+      content: "Conocerte ha sido de lo más bonito",
+    },
+  ]}
+>
   <main class="background py-5">
     {isTona ? <TonaTools client:load /> : null}
     <div class="flex items-center justify-center">
